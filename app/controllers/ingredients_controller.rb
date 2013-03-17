@@ -1,12 +1,11 @@
 class IngredientsController < ApplicationController
-  before_filter :logged_in
 
   def index
     @ingredients = Ingredient.order(:name)
   end
 
   def new
-    @user = Ingredient.new
+    @ingredient = Ingredient.new
   end
 
   def create

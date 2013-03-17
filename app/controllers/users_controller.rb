@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :logged_in
-
   def index
-    @users = User.order(:username)
+    @users = User.order(:last_name)
   end
 
   def new
@@ -10,12 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(params[:user])
-    @users = User.order(:username)
-  end
+    @user = User.create(params[:user])
 
-  def show
-    @user = User.find(params[:id])
   end
-
 end

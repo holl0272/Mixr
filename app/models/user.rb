@@ -13,5 +13,5 @@ class User < ActiveRecord::Base
   has_secure_password
   attr_accessible :username, :password, :password_confirmation
   has_and_belongs_to_many :cocktails
-  validates :username, :password, :password_confirmation, :presence => true
+  validates :username, :presence => true
 end

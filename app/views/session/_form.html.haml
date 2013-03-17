@@ -1,0 +1,11 @@
+.row
+  .large-4.columns
+  %fieldset.forms
+    %legend Login
+    = form_tag '/login', :remote => true do
+      = label_tag :username
+      = text_field_tag :username, nil, :autofocus => true
+      = label_tag :password
+      = password_field_tag :password
+      = submit_tag 'Start Mixin', :class => 'button radius success'
+      = button_to_function('Cancel', 'cancel_login_form()', :class => 'button radius alert', :id => 'cancel_btn')

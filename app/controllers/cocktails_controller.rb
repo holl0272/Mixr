@@ -1,5 +1,4 @@
 class CocktailsController < ApplicationController
-  before_filter :logged_in
 
   def index
     @cocktails = Cocktail.order(:name)

@@ -1,0 +1,5 @@
+<% if @auth.present? %>
+  $('#logout_btn').append('<%=j render(:partial => 'logout_link') %>');
+<% else %>
+  $('#form').empty().append('<%=j render(:partial => 'form') %>');
+<% end %>
