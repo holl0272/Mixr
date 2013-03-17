@@ -1,8 +1,8 @@
 <% if @user.valid? %>
   $('#form').empty();
   $('#greeting').append('<li id="congrats">Congratulations, you have successfully created a new Mixr account!</li>');
-  $('#greeting').fadeOut(8000);
-  $('#login').fadeIn(8000);
+  $('#greeting').fadeOut(5000);
+  $('#login_btn').fadeIn(5000);
 <% else %>
   $('#form').empty().append('<%=j render(:partial => 'form') %>');
 <% end %>

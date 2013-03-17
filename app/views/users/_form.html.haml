@@ -8,5 +8,5 @@
     = f.password_field :password
     = f.label :password_confirmation
     = f.password_field :password_confirmation
-    = button_to_function('Cancel', 'cancel_user_form()', :class => 'button tiny radius alert')
-    = f.submit nil, :class => 'button tiny radius success'
+    = f.submit nil, :class => 'button radius success'
+    = button_to_function('Cancel', 'cancel_form()', :id => 'cancel_btn', :class => 'button radius alert')

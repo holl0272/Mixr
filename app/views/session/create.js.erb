@@ -1,5 +1,7 @@
 <% if session[:user_id].present? %>
   $('#logout_btn').append('<%=j render(:partial => 'logout_link') %>');
+  $('#greeting').append("<li id='congrats'>Welcome Back ya' Booze Hound</li>");
+  $('#greeting').fadeOut(8000);
   show_or_hide_login_register_links();
   $('#subscriptions').append('<%=j render(:partial => 'shared/show_subscriptions') %>');
 <% else %>

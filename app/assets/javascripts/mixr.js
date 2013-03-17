@@ -15,12 +15,16 @@ function show_or_hide_login_register_links()
     $('#anonymous').show();
 }
 
-function cancel_user_form()
-{
-  $('#form').empty();
-}
 
 function cancel_login_form()
 {
   $('#form').empty();
+  $('#anonymous').show();
+}
+
+function cancel_form()
+{
+  $('#form').empty();
+  $('#login_btn').show();
+  $('#reg_btn').show();
 }
