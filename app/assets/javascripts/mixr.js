@@ -20,6 +20,7 @@ function cancel_login_form()
 {
   $('#form').empty();
   $('#anonymous').show();
+  $('#cocktail_btn').show();
 }
 
 function cancel_form()
@@ -27,4 +28,5 @@ function cancel_form()
   $('#form').empty();
   $('#login_btn').show();
   $('#reg_btn').show();
+  $('#cocktail_btn').show();
 }

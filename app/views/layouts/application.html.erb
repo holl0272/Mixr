@@ -17,17 +17,19 @@
   <%= render :partial => 'layouts/nav' %>
   <!-- End Header and Nav -->
 
-  <!-- Header and Nav -->
-  <%= render :partial => 'layouts/body' %>
-  <!-- End Header and Nav -->
+<%= yield %>
+
 
   <!-- Footer -->
   <%= render :partial => 'layouts/footer' %>
   <!-- End Footer -->
 
+<!--
   <script>
   $(document).foundation();
   </script>
+-->
+
 
 </body>
 

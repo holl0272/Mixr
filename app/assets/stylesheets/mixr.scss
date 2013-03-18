@@ -5,12 +5,27 @@
 
 #login_btn
 {
-  margin-left: 10px;
+  float: right;
+}
+
+#cocktail_btn
+{
+  float: center;
+}
+
+#reg_btn
+{
+  float: left;
 }
 
 #cancel_btn
 {
   float: right;
+}
+
+fieldset
+{
+  text-align: center;
 }
 
 #greeting
@@ -22,4 +37,24 @@
 #congrats
 {
   padding-left: 10px;
+}
+
+li
+{
+  list-style: none;
+}
+
+li#errors
+{
+  list-style: decimal;
+}
+
+#center_form
+{
+margin-left: 300px;
+}
+
+#cocktails
+{
+  display: inline;
 }

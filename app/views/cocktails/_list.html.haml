@@ -1,0 +1,18 @@
+%ul
+  %l1
+  - @cocktails.each do |cocktail|
+    %li
+      %h3= cocktail.name
+    %li
+      %a{"data-reveal-id" => "Modal", :href => "#"}= image_tag(cocktail.image)
+      #Modal.reveal-modal
+        %h2= cocktail.name
+        %h4= 'Created By: ' + cocktail.users.first.username
+        %p.lead= cocktail.created_at.strftime('%A, %B %e, %Y at %l:%m %P')
+        %h5= cocktail.description
+        %a{"data-reveal-id" => "2ndModal", :href => "#", :class => 'button radius secondary'} Ingredients
+        %a.close-reveal-modal ×
+#2ndModal.reveal-modal
+  - @cocktails.each do |cocktail|
+    %h5= cocktail.ingredients.first.name
+  %a.close-reveal-modal ×

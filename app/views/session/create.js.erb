@@ -1,9 +1,12 @@
 <% if session[:user_id].present? %>
   $('#logout_btn').append('<%=j render(:partial => 'logout_link') %>');
+  $('#greeting').empty();
   $('#greeting').append("<li id='congrats'>Welcome Back ya' Booze Hound</li>");
-  $('#greeting').fadeOut(8000);
+  $('#greeting').fadeOut(6000);
+  $('#top').hide();
   show_or_hide_login_register_links();
-  $('#subscriptions').append('<%=j render(:partial => 'shared/show_subscriptions') %>');
+  $('#user').show().append('<%=j render(:partial => 'shared/show_cocktails') %>');
 <% else %>
   $('#form').empty().append('<%=j render(:partial => 'form') %>');
+  $('#cocktails').empty()
 <% end %>

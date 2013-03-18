@@ -3,5 +3,5 @@
     %em= "Your registration failed due to:  #{pluralize(object.errors.count, 'error')}"
   %ol
     - object.errors.full_messages.each do |msg|
-      %li
+      %li#errors
         .label.alert.round= msg

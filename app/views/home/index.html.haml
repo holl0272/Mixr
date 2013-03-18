@@ -1,7 +1,19 @@
-#anonymous
-  #reg_btn
-    = link_to('Register', new_user_path, :remote => true, :class => 'button radius')
-  #login_btn
-    = link_to("Login", login_path, :remote => true, :class => 'button radius')
-#form
-#subscriptions
+.row
+  .large-4.columns
+  %fieldset#top
+    #anonymous
+      #reg_btn
+        = link_to('Register', new_user_path, :remote => true, :class => 'button radius')
+      #login_btn
+        = link_to("Login", login_path, :remote => true, :class => 'button radius')
+      #cocktail_btn
+        = link_to('Cocktails', cocktails_path, :remote => true, :class => 'button radius')
+    .small-6.columns
+      #center_form
+        #form
+    #cocktails
+.row
+  .large-4.columns
+  %fieldset#user
+    #user_info
+

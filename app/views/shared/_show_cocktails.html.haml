@@ -1,0 +1,17 @@
+#anonymous
+  #reg_btn
+    = link_to('New Cocktails', new_cocktail_path, :remote => true, :class => 'button radius')
+  #login_btn
+    = link_to("Add Ingrdients", new_ingredient_path, :remote => true, :class => 'button radius')
+.small-6.columns
+%ul
+- @auth.cocktails.each do |cocktail|
+  %li
+    %h2= cocktail.name
+  %li= link_to(image_tag(cocktail.image))
+  %li
+    %h5= 'You Created this Mix on: '
+    %h4= cocktail.created_at.strftime('%A, %B %e, %Y at %l:%m %P')
+  %li
+    %h3= cocktail.description
+  %br
