@@ -1,11 +1,12 @@
+body
+{
+  background: url('/assets/background.jpg');
+  background: stretch;
+}
+
 #logout_btn
 {
   margin-right: 5px;
-}
-
-#login_btn
-{
-  float: right;
 }
 
 #cocktail_btn
@@ -13,12 +14,12 @@
   float: center;
 }
 
-#reg_btn
+#reg_btn, #mixin_btn, #new_btn, #cocktails_btn
 {
   float: left;
 }
 
-#cancel_btn
+#cancel_btn, #show_btn, #add_ingredient_btn, #login_btn
 {
   float: right;
 }
@@ -26,6 +27,9 @@
 fieldset
 {
   text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  opacity: .9;
 }
 
 #greeting

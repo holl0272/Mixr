@@ -1,0 +1,7 @@
+%ul
+  %l1
+  - @ingredients.each do |ingredient|
+    %li
+      %h3= ingredient.name
+      = image_tag(ingredient.image)
+      %hr

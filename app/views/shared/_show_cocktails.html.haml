@@ -1,24 +1,28 @@
-#anonymous
-  #reg_btn
+#user_btns
+  #new_btn
     = link_to('New Cocktails', new_cocktail_path, :remote => true, :class => 'button radius')
-  #login_btn
-    = link_to("Add Ingrdients", new_ingredient_path, :remote => true, :class => 'button radius')
-.small-6.columns
-%ul
-- @auth.cocktails.each do |cocktail|
-  %li
-    %h2= cocktail.name
-  %li= link_to(image_tag(cocktail.image))
-  %li
-    %h5= 'You Created this Mix on: '
-    %h4= cocktail.created_at.strftime('%A, %B %e, %Y at %l:%m %P')
-  %li
-    %h3= cocktail.description
-  %a{"data-reveal-id" => "3rdModal", :href => "#", :class => "button radius secondary"} Ingredients
-  %p
-  %hr
-  #3rdModal.reveal-modal
-    %h3
-      %l1= cocktail.ingredients.map{ |ingredient| link_to(ingredient.name, ingredient_path(ingredient))}.join(' and ').html_safe
-    %a.close-reveal-modal ×
+  #cocktails_btn.hide
+    = link_to('Show Cocktails', '#', :remote => true, :class => 'button radius')
+  #show_btn
+    = link_to('Show Ingredients', ingredients_path, :remote => true, :class => 'button radius')
+  #add_ingredient_btn.hide
+    = link_to('Add Ingredients', new_ingredient_path, :remote => true, :class => 'button radius')
+#drinks
+  %ul
+  - @auth.cocktails.each do |cocktail|
+    %li
+      %h2= cocktail.name
+    %li= link_to(image_tag(cocktail.image))
+    %li
+      %h5= 'You Created this Mix on: '
+      %h4= cocktail.created_at.strftime('%A, %B %e, %Y at %l:%m %P')
+    %li
+      %h3= cocktail.description
+    %a{"data-reveal-id" => "3rdModal", :href => "#", :class => "button radius secondary"} Ingredients
+    %p
+    %hr
+    #3rdModal.reveal-modal
+      %h3
+        %l1= cocktail.ingredients.map{ |ingredient| link_to(ingredient.name, ingredient_path(ingredient))}.join(' and ').html_safe
+      %a.close-reveal-modal ×
 

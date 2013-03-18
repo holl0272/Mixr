@@ -30,3 +30,9 @@ function cancel_form()
   $('#reg_btn').show();
   $('#cocktail_btn').show();
 }
+
+function hide_cocktails()
+{
+  $('#user').hide();
+  $('#anonymous').show();
+}
