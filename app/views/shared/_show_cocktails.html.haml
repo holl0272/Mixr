@@ -16,6 +16,7 @@
     %h3= cocktail.description
   %a{"data-reveal-id" => "3rdModal", :href => "#", :class => "button radius secondary"} Ingredients
   %p
+  %hr
   #3rdModal.reveal-modal
     %h3
       %l1= cocktail.ingredients.map{ |ingredient| link_to(ingredient.name, ingredient_path(ingredient))}.join(' and ').html_safe

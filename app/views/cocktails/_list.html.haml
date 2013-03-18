@@ -5,6 +5,7 @@
       %h3= cocktail.name
     %li
       %a{"data-reveal-id" => "Modal", :href => "#"}= image_tag(cocktail.image)
+    %hr
       #Modal.reveal-modal
         %h2= cocktail.name
         %h4= 'Created By: ' + cocktail.users.first.username
@@ -14,5 +15,7 @@
         %a.close-reveal-modal ×
       #2ndModal.reveal-modal
         %h3
-          %l1= cocktail.ingredients.map{ |ingredient| ingredient.name }.join(', ')
+          %ul
+            %h4= cocktail.ingredients.map{ |ingredient| ingredient.name }.join(', and ')
         %a.close-reveal-modal ×
+
